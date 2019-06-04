@@ -632,8 +632,8 @@
 
 - (void)removeSelf {
     [UIView animateWithDuration:0.35 animations:^{
-        UIView *view = (UIView*)[view_bg viewWithTag:100];
-        view_bg.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
+        UIView *view = (UIView*)[self->view_bg viewWithTag:100];
+        self->view_bg.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
         view.transform = CGAffineTransformMakeTranslation
         (0, 470/2.0);
         //view_bg.transform = CGAffineTransformMakeTranslation(0, kScreenHeight);
@@ -790,8 +790,8 @@
     [[UIApplication sharedApplication].keyWindow addSubview:self];
     
     [UIView animateWithDuration:0.25 animations:^{
-        view_bg.backgroundColor = [UIColor colorWithWhite:0 alpha:.6];
-        UIView *view = (UIView*)[view_bg viewWithTag:100];
+        self->view_bg.backgroundColor = [UIColor colorWithWhite:0 alpha:.6];
+        UIView *view = (UIView*)[self->view_bg viewWithTag:100];
         view.transform = CGAffineTransformMakeTranslation
         (0, -470/2.0);
     }];
